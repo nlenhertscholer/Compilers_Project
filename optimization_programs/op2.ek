@@ -1,0 +1,19 @@
+def int add(int $x, int $y) {
+    return $x + $y;
+}
+
+def int run() {
+    int $x = 0;
+    int $y = 1;
+    int $i = 0;
+    int $max = 2000000000;
+    while($i < $max) {
+        $x = add($x, $y);
+        $y = add($x, $y) + 1;
+        $i = $i + 1;
+    }
+    print $x;
+    print $y;
+
+    return 0;
+}
